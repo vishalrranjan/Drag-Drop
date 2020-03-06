@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Draggable Link</title>
+    <meta name="description"
+        content="Drag a link to reconnect it. Nodes have custom Adornments for selection, resizing, and rotating.  The Palette includes links." />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <link rel="stylesheet" href="./style.css"> -->
+
+    
+</head>
+
+<body onload="init()">
+    <div id="sample">
+        <div style="width: 100%; display: flex; justify-content: space-between">
+            <div id="myPaletteDiv"
+                style="width: 105px; margin-right: 2px; background-color: whitesmoke; border: solid 1px black"></div>
+            <div id="myDiagramDiv" style="flex-grow: 1; height: 620px; border: solid 1px black"></div>
+        </div>
+        <textarea id="mySavedModel" style="width:100%;height:300px; display: none;">
+            { "class": "go.GraphLinksModel",
+              "linkFromPortIdProperty": "fromPort",
+              "linkToPortIdProperty": "toPort",
+              "nodeDataArray": [],
+              "linkDataArray": []
+            }
+        </textarea>
+    </div>
+    <script src="./script.js"></script>
+    <script src="https://unpkg.com/gojs/release/go-debug.js"></script>
+</body>
+</html>
